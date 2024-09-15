@@ -1,0 +1,8 @@
+neme: Hello
+on: push
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Hello, world"
+            - users: actions/checkout@v4

@@ -1,0 +1,19 @@
+name: Manual
+on:
+    workflow_dispatch:
+        inputs:
+            log-level:
+                type: choice
+                options:
+                    - info
+                    - warn
+                    - error
+                default: info
+                required: true
+                description: Log level to determine verbosity
+jobs:
+    run:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "${{ inputs.log-level }}"
+

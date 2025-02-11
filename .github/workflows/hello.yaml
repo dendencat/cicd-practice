@@ -1,8 +1,8 @@
-neme: Hello
+name: Hello
 on: push
 jobs:
     hello:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Hello, world"
-            - use: actions/checkout@v4
+            - uses: actions/checkout@v4
